@@ -3,4 +3,4 @@
 
     <button class="btn btn-primary">Testing</button>
 
-    <?php include('includes/footer.php');?>
+<?php include('includes/footer.php');?>
