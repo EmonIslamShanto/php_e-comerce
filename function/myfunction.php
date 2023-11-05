@@ -9,6 +9,13 @@ function getAll($table)
     return $query_run = mysqli_query($con, $query);
 }
 
+function getById($table, $id)
+{
+    global $con;
+    $query = "SELECT * FROM $table where id='$id'";
+    return $query_run = mysqli_query($con, $query);
+}
+
 function redirect($url, $message)
 {
     $_SESSION['message'] = $message;
