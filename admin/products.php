@@ -9,7 +9,7 @@ include('../middleware/adminMiddleware.php');
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-                <h4>Categories
+                <h4>Products
                 <a href="index.php" class="btn btn-primary float-end">Back</a>
                 </h4>
             </div>
@@ -28,11 +28,11 @@ include('../middleware/adminMiddleware.php');
                     <tbody>
                         <?php
                         
-                        $category = getAll("catagories");
+                        $products = getAll("products");
 
-                        if(mysqli_num_rows($category) > 0)
+                        if(mysqli_num_rows($products) > 0)
                         {
-                            foreach($category as $item)
+                            foreach($products as $item)
                             {
                                 ?>
                                 <tr>
@@ -41,12 +41,12 @@ include('../middleware/adminMiddleware.php');
                                     <td><img src="../uploads/<?= $item['image']; ?>" width="50px" height="50px" alt="<?= $item['name']; ?>"></td>
                                     <td><?= $item['status'] == '0'? "Visible":"Hidden"; ?></td>
                                     <td>
-                                        <a href="edit-category.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-primary">Edit</a>
+                                        <a href="edit-product.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-primary">Edit</a>
                                     </td>
                                     <td>
                                         <form action="code.php" method="POST">
-                                            <input type="hidden" name="category_id" value="<?= $item['id']; ?>">
-                                            <button type="submit" class="btn btn-sm btn-danger" name="delete_category_btn">Delete</button>
+                                            <input type="hidden" name="product_id" value="<?= $item['id']; ?>">
+                                            <button type="submit" class="btn btn-sm btn-danger" name="delete_product_btn">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
