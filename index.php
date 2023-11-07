@@ -14,7 +14,7 @@ include('includes/header.php');?>
             }
             ?>
 
-    <h1>Hello World</h1>
+    <h1>Hello World <i class="fa fa-user"></i></h1>
 
     <button class="btn btn-primary">Testing</button>
 

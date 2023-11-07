@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include('../config/dbcon.php');
 
 function getAll($table)
@@ -13,6 +14,13 @@ function getById($table, $id)
 {
     global $con;
     $query = "SELECT * FROM $table where id='$id'";
+    return $query_run = mysqli_query($con, $query);
+}
+
+function getAllActive($table)
+{
+    global $con;
+    $query = "SELECT * FROM $table WHERE status='0'";
     return $query_run = mysqli_query($con, $query);
 }
 
