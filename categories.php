@@ -7,7 +7,9 @@ include('includes/header.php');
 
 <div class="py-3 bg-primary">
     <div class="container">
-        <h5 class="text-white"><a class="text-white text-decoration-none" href="index.php">Home</a> / Categories</h5>
+        <h5 class="text-white"><a class="text-white text-decoration-none" href="index.php">Home</a> / Categories
+        <a href="index.php" class="text-white text-decoration-none float-start">Back</a>
+        </h5>
     </div>
 </div>
 
@@ -27,12 +29,14 @@ include('includes/header.php');
                         {
                             ?>
                                 <div class="col-md-3 mb-2">
-                                    <div class="card shadow align-items-center">
-                                        <div class="card-body">
-                                            <img src="uploads/<?= $item['image']; ?>" alt="Category Image" width="100px" height="90px">
-                                            <h4><?= $item['name']; ?></h4>
+                                    <a class="text-decoration-none" href="products.php?catagory=<?= $item['slug'];?>">
+                                        <div class="card shadow align-items-center">
+                                            <div class="card-body">
+                                                <img src="uploads/<?= $item['image']; ?>" alt="Category Image" width="100px" height="90px">
+                                                <h4><?= $item['name']; ?></h4>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             <?php
                         }
