@@ -21,7 +21,7 @@
             <?= $_SESSION['auth_user']['name'];?>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="cart.php">Cart</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="logout.php">Logout</a></li>
           </ul>
